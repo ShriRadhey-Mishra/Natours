@@ -81,7 +81,7 @@ const deleteTour = (req, res) => {
       message: 'Invalid ID',
     });
   }
-  res.status(200).json({
+  res.status(204).json({
     status: 'success',
     message: `Deleted the tour at id: ${id}`,
   });
