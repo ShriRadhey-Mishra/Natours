@@ -8,7 +8,6 @@ const userRouter = require('./routes/userRoutes');
 console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
-
 app.use(express.json());
 app.use((req, res, next) => {
   console.log('Hello from the middleware.');
@@ -20,6 +19,5 @@ app.use((req, res, next) => {
 });
 app.use('/api/v1/tours', tourRouter); // mounting
 app.use('/api/v1/users', userRouter); // mounting
-
 
 module.exports = app;
